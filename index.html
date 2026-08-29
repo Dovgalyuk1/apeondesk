@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>$DESK — ApeOnDesk | He put the phone down.</title>
+<meta name="description" content="$DESK — ApeOnDesk. He put the phone down, found a desk in the reading room, and now he runs his own book. A fan-made meme mashup of ApeOnFone ($FONE) and OTC Desks." />
+
+<!-- Open Graph / social preview -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="$DESK — ApeOnDesk" />
+<meta property="og:description" content="He put the phone down. Found a desk. Now he runs the book. $DESK — the evolution nobody asked for." />
+<meta property="og:image" content="assets/mascot-terminal.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="$DESK — ApeOnDesk" />
+<meta name="twitter:description" content="He put the phone down. Found a desk. Now he runs the book." />
+<meta name="twitter:image" content="assets/mascot-terminal.jpg" />
+<!-- NOTE: og:image/twitter:image use a relative path. Once the site is live on its
+     final domain, replace with an absolute URL, e.g. https://apeondesk.xyz/assets/mascot-terminal.jpg
+     so link previews on X/Telegram pick it up correctly. -->
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%231a1610'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle'%3E%F0%9F%96%A5%EF%B8%8F%3C/text%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ============ BOOT SCREEN ============ -->
+<div id="boot-screen" class="boot-screen" role="presentation">
+  <div class="boot-inner">
+    <pre id="boot-text" class="boot-text"></pre>
+    <div class="boot-hint">PRESS ANY KEY — OR WAIT — TO ENTER</div>
+  </div>
+  <div class="scanlines"></div>
+</div>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track" id="ticker-track">
+    <!-- populated by JS, duplicated for seamless loop -->
+  </div>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <a href="#top" class="nav-logo">
+    <span class="nav-logo-icon">🖥️</span>
+    <span>$DESK</span>
+  </a>
+  <nav class="nav-links" id="nav-links">
+    <a href="#story">The Story</a>
+    <a href="#book">The Book</a>
+    <a href="#rules">Rules</a>
+    <a href="#checkout">Checkout</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="btn btn-ghost" id="sound-toggle" aria-label="Toggle sound">🔇</button>
+    <button class="nav-burger" id="nav-burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-media">
+      <img src="assets/mascot-terminal.jpg" alt="An ape sits at an old green-screen library computer instead of a phone" />
+      <div class="crt-glow"></div>
+      <div class="hero-scanlines"></div>
+    </div>
+    <div class="hero-content">
+      <div class="eyebrow">$FONE → $DESK · A LIBRARY ORIGIN STORY</div>
+      <h1 class="wordmark">ApeOnDesk</h1>
+      <p class="tagline">He put the phone down. Found a desk in the reading room.<br>Now he runs his own book.</p>
+
+      <div class="ca-row">
+        <span class="ca-label">CA:</span>
+        <code class="ca-value" id="ca-value">NOT MINTED YET</code>
+        <button class="btn-copy" id="ca-copy" aria-label="Copy contract address">COPY</button>
+      </div>
+
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-primary" data-link="BUY_URL">Buy $DESK</a>
+        <a href="#" class="btn btn-secondary" data-link="CHART_URL">Chart</a>
+        <a href="#" class="btn btn-secondary" data-link="X_URL">X / Twitter</a>
+        <a href="#" class="btn btn-secondary" data-link="TELEGRAM_URL">Telegram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE STORY ============ -->
+  <section class="story" id="story">
+    <div class="section-head">
+      <span class="section-tag">FILE 01</span>
+      <h2>THE ORIGIN STORY</h2>
+    </div>
+
+    <div class="story-terminal">
+      <div class="story-terminal-bar"><span></span><span></span><span></span><span class="story-terminal-title">origin_story.txt — read only</span></div>
+      <div class="story-body">
+        <p><span class="prompt">&gt;</span> Every generation of ape gets the tools it deserves.</p>
+        <p><span class="prompt">&gt;</span> First there was a phone. Small screen, big thumbs, zero attention span. He scrolled. He liked. He aped. It worked — for a while. That ape had a name: <strong>$FONE</strong>.</p>
+        <p><span class="prompt">&gt;</span> Then, one night, deep in the stacks of a library nobody visits anymore, he found something better. A desk. A real one. Beige case, humming fan, a green cursor blinking like it had been waiting for him.</p>
+        <p><span class="prompt">&gt;</span> He sat down. He has not stood up since.</p>
+        <p><span class="prompt">&gt;</span> He doesn't scroll anymore — he runs a book. His own book, held on-chain, in an account only he can own. Every trade gets written into it, one line at a time, the old-fashioned way.</p>
+        <p><span class="prompt">&gt;</span> Nobody taught him OTC. Nobody taught him to type. He just found the desk and refused to leave.</p>
+        <p class="story-final"><span class="prompt">&gt;</span> This is <strong>$DESK</strong>.<span class="cursor-blink">█</span></p>
+      </div>
+    </div>
+
+    <p class="disclaimer-inline">$DESK is an independent, fan-made meme mashup inspired by ApeOnFone ($FONE) and OTC Desks. Not affiliated with, endorsed by, or officially connected to either project — just an ape, a desk, and a bit.</p>
+  </section>
+
+  <!-- ============ THE BOOK (stats / card catalog) ============ -->
+  <section class="book" id="book">
+    <div class="section-head">
+      <span class="section-tag">FILE 02</span>
+      <h2>THE BOOK</h2>
+      <p class="section-sub">Every desk keeps its own ledger. Here's his, checked out live from the shelf.</p>
+    </div>
+
+    <div class="catalog-grid" id="catalog-grid">
+      <div class="catalog-card" data-stat="price">
+        <div class="catalog-card-index">001.24</div>
+        <div class="catalog-card-label">Price</div>
+        <div class="catalog-card-value" data-field="price">N/A</div>
+      </div>
+      <div class="catalog-card" data-stat="mcap">
+        <div class="catalog-card-index">002.11</div>
+        <div class="catalog-card-label">Market Cap</div>
+        <div class="catalog-card-value" data-field="mcap">N/A</div>
+      </div>
+      <div class="catalog-card" data-stat="liquidity">
+        <div class="catalog-card-index">003.07</div>
+        <div class="catalog-card-label">Liquidity</div>
+        <div class="catalog-card-value" data-field="liquidity">N/A</div>
+      </div>
+      <div class="catalog-card" data-stat="volume">
+        <div class="catalog-card-index">004.19</div>
+        <div class="catalog-card-label">24h Volume</div>
+        <div class="catalog-card-value" data-field="volume">N/A</div>
+      </div>
+      <div class="catalog-card" data-stat="desks">
+        <div class="catalog-card-index">005.02</div>
+        <div class="catalog-card-label">Desks Checked Out</div>
+        <div class="catalog-card-value" data-field="desks">—</div>
+      </div>
+      <div class="catalog-card" data-stat="quiet">
+        <div class="catalog-card-index">006.66</div>
+        <div class="catalog-card-label">Reading Room Volume</div>
+        <div class="catalog-card-value" data-field="quiet">SILENT</div>
+      </div>
+    </div>
+    <p class="catalog-note" id="catalog-note">No contract minted yet — the numbers above are simulated placeholders. Once $DESK's CA is set in <code>script.js</code>, this card catalog pulls live price / mcap / liquidity / volume straight from DexScreener.</p>
+  </section>
+
+  <!-- ============ RULES (tokenomics) ============ -->
+  <section class="rules" id="rules">
+    <div class="section-head">
+      <span class="section-tag">FILE 03</span>
+      <h2>LIBRARY RULES</h2>
+      <p class="section-sub">Posted above the desk. Read before you sit down.</p>
+    </div>
+
+    <div class="rules-card">
+      <ul class="rules-list">
+        <li><span class="rule-num">01</span> 0% tax. Buy tax, sell tax — both zero, forever.</li>
+        <li><span class="rule-num">02</span> Liquidity: burned. The desk isn't going anywhere.</li>
+        <li><span class="rule-num">03</span> Contract: renounced. Nobody, including him, can change the rules mid-checkout.</li>
+        <li><span class="rule-num">04</span> Total supply: 1,000,000,000 $DESK. No more get printed after hours.</li>
+        <li><span class="rule-num">05</span> Silence in the reading room. Volatility is fine. Shouting is not.</li>
+        <li><span class="rule-num">06</span> Return the desk exactly how you found it. (You won't.)</li>
+        <li><span class="rule-num">07</span> No refunds on aped trades. This was true on the phone too.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ CHECKOUT (how to buy) ============ -->
+  <section class="checkout" id="checkout">
+    <div class="section-head">
+      <span class="section-tag">FILE 04</span>
+      <h2>CHECKOUT PROCEDURE</h2>
+      <p class="section-sub">Four steps. Stamp your card. Take a seat.</p>
+    </div>
+
+    <div class="checkout-grid">
+      <div class="checkout-card">
+        <div class="stamp">01</div>
+        <h3>Get a library card</h3>
+        <p>Download a Solana wallet — Phantom is the desk's preferred brand. This is your card. Don't lose it.</p>
+      </div>
+      <div class="checkout-card">
+        <div class="stamp">02</div>
+        <h3>Fund it</h3>
+        <p>Buy SOL on any exchange and send it to your wallet. This covers the desk fee and gets you in the room.</p>
+      </div>
+      <div class="checkout-card">
+        <div class="stamp">03</div>
+        <h3>Swap for $DESK</h3>
+        <p>Head to your DEX of choice, paste the CA above, swap SOL → $DESK. Double-check the contract every time.</p>
+      </div>
+      <div class="checkout-card">
+        <div class="stamp">04</div>
+        <h3>Sit down. Stay a while.</h3>
+        <p>Your book is now open. Whatever happens to the price, at least you've got a desk.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq" id="faq">
+    <div class="section-head">
+      <span class="section-tag">FILE 05</span>
+      <h2>CATALOG INQUIRIES</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Is $DESK affiliated with ApeOnFone ($FONE) or OTC Desks?</summary>
+        <p>No. $DESK is a fan-made mashup inspired by both — an ape, a phone he outgrew, and a desk he found. Nothing here is official, endorsed, or connected to either original project. It's a bit that became a token.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is this a good investment?</summary>
+        <p>$DESK is a meme token made for entertainment. It is not a security, not financial advice, and comes with no promise of any return — the ape can't even explain OTC, why would you trust his book?</p>
+      </details>
+      <details class="faq-item">
+        <summary>Where's the CA / socials?</summary>
+        <p>Not live yet — every link on this page is a placeholder until launch. Watch the ticker up top for the drop.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Why a library?</summary>
+        <p>Because "OTC desk" already means "runs its own book." Somewhere, a card catalog is doing the exact same job as a trading ledger, and nobody has pointed that out until now.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <span class="nav-logo-icon">🖥️</span>
+      <span>$DESK — ApeOnDesk</span>
+    </div>
+    <div class="ca-row ca-row-footer">
+      <span class="ca-label">CA:</span>
+      <code class="ca-value" id="ca-value-footer">NOT MINTED YET</code>
+      <button class="btn-copy" id="ca-copy-footer" aria-label="Copy contract address">COPY</button>
+    </div>
+    <div class="footer-links">
+      <a href="#" data-link="X_URL">X</a>
+      <a href="#" data-link="TELEGRAM_URL">Telegram</a>
+      <a href="#" data-link="CHART_URL">Dexscreener</a>
+    </div>
+  </div>
+  <p class="footer-disclaimer">$DESK is a meme token created purely for entertainment. It has no intrinsic value, is not an investment product, and comes with no promise of profit or return. Nothing on this site is financial advice. Please only ever risk what you can afford to lose. $DESK is an independent, fan-made project — not affiliated with, endorsed by, or officially connected to ApeOnFone ($FONE) or OTC Desks.</p>
+  <p class="footer-copy">© 2026 $DESK. The desk was here first. So was the library.</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
